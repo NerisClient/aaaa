@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NerisClient</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Кнопка "Авторизоваться" в правом верхнем углу -->
+  <div class="top-right">
+    <button class="btn auth-btn" onclick="openAuthModal()">Авторизоваться</button>
+  </div>
+
+  <!-- Центральный блок -->
+  <div class="container">
+    <h1 class="logo">NERIS CLIENT</h1>
+    <div class="buttons">
+      <button class="btn premium" onclick="openAuthModal()">Купить</button>
+    </div>
+
+    <!-- Социальные ссылки -->
+    <div class="social-links">
+      <a href="https://t.me/NerisClient" target="_blank" class="social-icon">
+        <img src="images/telegram.svg" alt="Telegram" />
+      </a>
+      <a href="https://discord.gg/fnyGAuhHqA" target="_blank" class="social-icon">
+        <img src="images/discord.svg" alt="Discord" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Модальное окно -->
+  <div class="modal" id="authModal">
+    <div class="modal-content auth-transition">
+      <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+      <h2 id="authTitle">Авторизация</h2>
+
+      <!-- Поле логина (только при регистрации) -->
+      <input type="text" id="regLogin" placeholder="Логин" style="display: none;" />
+
+      <!-- Почта или логин -->
+      <input type="text" id="authEmail" placeholder="Почта или Логин" />
+
+      <!-- Пароль -->
+      <input type="password" id="authPassword" placeholder="Пароль" />
+
+      <!-- Кнопка действия -->
+      <button id="authAction" class="btn premium">Войти</button>
+
+      <!-- Переключение -->
+      <p class="toggle-mode" id="toggleText" onclick="toggleAuthMode()">Нет аккаунта? Зарегистрироваться</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
