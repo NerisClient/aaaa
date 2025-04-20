@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(#2c2c2c, #1a1a1a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: slideDown 1s ease;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  animation: slideUp 1.5s ease;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.buy-btn {
+  background-color: #ff3b3b;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.6);
+}
+
+.download-btn {
+  background-color: #111;
+  color: white;
+  border: 1px solid #444;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
